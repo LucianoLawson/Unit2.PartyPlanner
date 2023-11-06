@@ -6,9 +6,10 @@
  * @returns {number} the number of degrees C
  */
 function convertToCelsius(fahren) {
-  return ((fahren - 32) * 5/9);
+  celcius = fahren - 32 * (5/9);
+  return celcius;
 }
-
+console.log(convertToCelsius());
 /**
  * Takes both numbers (F, C) and display a message with
  * both numbers and how that temp makes you feel using
@@ -25,19 +26,22 @@ function convertToCelsius(fahren) {
  * @param {number} celc
  */
 function createMessage(fahren, celc) {
+
   if (celc < 32) {
-    message = 'very cold'
+    console.log("very cold")
   }
     else if (celc < 64) {
-      message = 'cold'
+      console.log("cold")
     }
     else if (celc < 86) {
-      message = 'warm'
+      console.log("warm")
     }
     else if (celc < 100) {
-      message = 'hot'
+      console.log("hot")
     }
 }
+
+console.log(createMessage());
 
 /**
  * Takes a number and returns a random integer from 0 to the limit
@@ -45,7 +49,6 @@ function createMessage(fahren, celc) {
  * @returns {number} a number between 0 and the int passed in
  */
 function rand(limit) {
-/*   add rand limit */
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
