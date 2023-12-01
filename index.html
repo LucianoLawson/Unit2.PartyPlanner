@@ -1,22 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- <link rel="stylesheet" href="index.css"> -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Party Planner</title>
     <style>
         body {
             background-color: black;
             color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
             text-align: center;
+        }
+
+        form {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form label, form input, form textarea {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-        <script src="index.js"></script>
-        <h1>
-            Please select your party and fill out the form!
-        </h1>
+    <h1>Party Planner</h1>
+    
+    <!-- Party Form -->
+    <form id="party-form">
+        <label for="party-name">Name:</label>
+        <input type="text" id="party-name" required>
+        <label for="party-date">Date:</label>
+        <input type="date" id="party-date" required>
+        <label for="party-time">Time:</label>
+        <input type="time" id="party-time" required>
+        <label for="party-location">Location:</label>
+        <input type="text" id="party-location" required>
+        <label for="party-description">Description:</label>
+        <textarea id="party-description" required></textarea>
+        <button type="submit">Add Party</button>
+    </form>
+
+    <!-- Party List -->
+    <ul id="party-list">
+        <!-- Party items will be dynamically added here -->
+    </ul>
+
+    <script src="index.js"></script>
 </body>
 </html>
